@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi S | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--bg:#f5faf7;--card:#fff;--text:#183b2b;--accent:#16845b}
+body.dark{--bg:#101a16;--card:#1b2922;--text:#effff5;--accent:#65dba4}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:var(--card);position:sticky;top:0;box-shadow:0 2px 10px #0001;z-index:10}
+.logo{font-size:23px;font-weight:bold;color:var(--accent)}
+nav a{color:var(--text);text-decoration:none;margin-left:15px;font-size:14px}
+button,.btn{background:var(--accent);color:white;padding:10px 15px;border:0;border-radius:8px;cursor:pointer;text-decoration:none}
+section{padding:65px 8%;scroll-margin-top:75px}
+.hero{min-height:75vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.hero h1{font-size:clamp(36px,7vw,60px);line-height:1.2;margin:15px 0}
+.hero h1 span{color:var(--accent)}
+.tag{color:var(--accent);font-weight:bold}
+p{margin:12px 0}
+h2{font-size:30px;margin-bottom:20px}
+.card{background:var(--card);padding:24px;border-radius:14px;margin:12px 0;box-shadow:0 5px 20px #00008}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.skill{background:var(--card);padding:17px;border-radius:10px;text-align:center}
+footer{text-align:center;padding:25px;background:var(--card)}
+.menu{display:none}
+@media(max-width:600px){
+header{flex-wrap:wrap}
+.menu{display:block}
+nav{display:none;width:100%;padding-top:15px}
+nav.open{display:flex;flex-direction:column}
+nav a{padding:7px;margin:0}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Vaishnavi.</div>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰ Menu</button>
+<button onclick="document.body.classList.toggle('dark')">☀️ / 🌙</button>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<p class="tag">HELLO, WELCOME TO MY PORTFOLIO</p>
+<h1>Hi, I'm <span>Vaishnavi S</span></h1>
+<h3>Computer Science Engineering Student</h3>
+<p>I'm a passionate learner exploring web development and technology. I enjoy learning new skills and building creative projects.</p>
+<a class="btn" href="#projects">Explore My Work ↓</a>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>Hello! I'm Vaishnavi S, a Computer Science and Engineering student at PSN Engineering College.</p>
+<p>I'm interested in technology, programming, and developing useful websites. I'm continuously learning and improving my technical skills.</p>
+<p><b>Education:</b> B.E. Computer Science and Engineering</p>
+<p><b>College:</b> PSN Engineering College</p>
+</div>
+</section>
+
+<section id="skills">
+<h2>My Skills</h2>
+<div class="grid">
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">Python (Learning)</div>
+<div class="skill">JavaScript (Learning)</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Communication</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>My Projects</h2>
+<div class="card">
+<h3>Personal Portfolio Website</h3>
+<p>A responsive website introducing me, my education, skills and projects.</p>
+<p><b>Technologies:</b> HTML, CSS, JavaScript</p>
+</div>
+<div class="card">
+<h3>Future Projects</h3>
+<p>I'm continuing to learn and will add more projects as I build them.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="card">
+<p>I'm happy to connect and learn from new opportunities.</p>
+<p>Email: Add your email address here</p>
+<p>LinkedIn: Add your LinkedIn profile link here</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Vaishnavi S | Personal Portfolio</p>
+<p>Designed with 💚 and a passion for learning.</p>
+</footer>
+
+<script>
+document.querySelectorAll('nav a').forEach(link=>{
+link.addEventListener('click',()=>{
+document.querySelector('nav').classList.remove('open');
+});
+});
+</script>
+</body>
+  </html>
